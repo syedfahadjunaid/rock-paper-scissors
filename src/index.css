@@ -34,6 +34,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   background-color: #828a66;
+  height: fit-content;
 }
 
 .choices {
@@ -48,7 +49,6 @@ button:hover {
   width: 150px;
   height: 150px;
   border-radius: 1rem;
-  background: black;
 }
 
 .images {
