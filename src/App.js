@@ -1,10 +1,56 @@
 import { useState, useEffect, useCallback } from 'react';
+import rock from './assets/rock.png';
+import paper from './assets/paper.png';
+import scissors from './assets/scissors.png';
 
 function App() {
   const [choice, setChoice] = useState(null);
   const [result, setResult] = useState('');
   const [compChoice, setCompChoice] = useState('');
   const choices = ['rock', 'paper', 'scissors'];
+
+  let userImage;
+  let compimage;
+
+  if (choice === 'rock') {
+    userImage = (
+      <div className="img">
+        <img className="images" src={rock} alt="rock img" />
+      </div>
+    );
+  } else if (choice === 'paper') {
+    userImage = (
+      <div className="img">
+        <img className="images" src={paper} alt="paper img" />
+      </div>
+    );
+  } else if (choice === 'scissors') {
+    userImage = (
+      <div className="img">
+        <img className="images" src={scissors} alt="scissors img" />
+      </div>
+    );
+  }
+
+  if (compChoice === 'rock') {
+    compimage = (
+      <div className="img">
+        <img className="images" src={rock} alt="rock img" />
+      </div>
+    );
+  } else if (compChoice === 'paper') {
+    compimage = (
+      <div className="img">
+        <img className="images" src={paper} alt="paper img" />
+      </div>
+    );
+  } else if (compChoice === 'scissors') {
+    compimage = (
+      <div className="img">
+        <img className="images" src={scissors} alt="scissors img" />
+      </div>
+    );
+  }
 
   const gameResult = useCallback(() => {
     if (
@@ -46,11 +92,20 @@ function App() {
     );
   });
   return (
-    <div>
-      <h1>USER CHOICE IS : {choice}</h1>
-      <h1>COMPUTER CHOICE IS: {compChoice}</h1>
-      {renderedChoices}
-      <h1>{result}</h1>
+    <div className="app__rps">
+      <div className="choices">
+        <h1>USER CHOICE</h1>
+        {userImage}
+      </div>
+
+      <div className="choices">
+        <h1>COMPUTER CHOICE</h1>
+        {compimage}
+      </div>
+
+      <div className="app__rps-btn">{renderedChoices}</div>
+
+      <h1 className="result">{result}</h1>
     </div>
   );
 }

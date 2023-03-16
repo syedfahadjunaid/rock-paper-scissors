@@ -1,1 +1,64 @@
+h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #dcca87;
+}
 
+.app__rps-btn {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+button {
+  padding: 1rem;
+  margin: 3rem 0;
+  border: 2px solid green;
+  background: gold;
+  border-radius: 5px;
+  width: 100%;
+  font-size: larger;
+  font-family: cursive;
+  font-variant: small-caps;
+  transition: 0.5s ease;
+}
+
+button:hover {
+  background: #dcca87;
+  border-color: white;
+  font-weight: 600;
+}
+
+.app__rps {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #828a66;
+}
+
+.choices {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  border: 5px solid white;
+  width: 150px;
+  height: 150px;
+  border-radius: 1rem;
+  background: black;
+}
+
+.images {
+  width: 100%;
+  height: 100%;
+}
+
+.result {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 0.06em;
+  font-size: 100px;
+  color: azure;
+}
